@@ -1,0 +1,81 @@
+/* Imports */
+/* Colors */
+/* Imports */
+header {
+  padding: 25px 0;
+  background: #ffdce2;
+}
+
+header h1 {
+  padding-left: 50px;
+}
+
+/* Imports */
+/* Colors */
+/* Imports */
+#itemList h2 {
+  margin: 50px 0 0 50px;
+}
+
+#itemList #itemContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 400px;
+  margin: 30px 0 0 50px;
+}
+
+#itemList #itemContainer .item {
+  background: #3f3f3f;
+  color: white;
+  padding-left: 20px;
+  line-height: 50px;
+  height: 50px;
+  width: 80%;
+  border-radius: 10px;
+}
+
+/* Colors */
+* {
+  font-family: Helvetica;
+}
+
+body {
+  margin: auto;
+}
+
+/* Imports */
+/* Colors */
+/* Imports */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100px;
+  background: #ffdce2;
+  padding: 50px 0 0 50px;
+}
+
+footer .itemFooter {
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
+
+/* Imports */
+/* Colors */
+/* Imports */
+#product {
+  height: 400px;
+}
+
+#product h2 {
+  margin: 50px 0 0 50px;
+}
+/*# sourceMappingURL=main.css.map */

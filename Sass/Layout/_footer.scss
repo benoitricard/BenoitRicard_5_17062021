@@ -1,0 +1,14 @@
+/* Imports */
+@import "../utils/variables";
+/* Imports */
+
+footer {
+    display: flex;
+    margin-top: 100px;
+    background: $firstColor;
+    padding: 50px 0 0 50px;
+    .itemFooter {
+        margin-right: 100px;
+        margin-bottom: 50px;
+    }
+}
