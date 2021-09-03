@@ -1,0 +1,71 @@
+/* Imports */
+@import "../utils/variables";
+/* Imports */
+
+.sectionContainer {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+    .teddyProductPhoto {
+    min-height: 400px;
+    max-height: 400px;
+    min-width: 600px;
+    max-width: 600px;
+    box-shadow: 0px 0px 5px -1px #737373;
+    border-radius: 15px;
+    }
+    .productInfo {
+        margin-top: -45px;
+        display: flex;
+        flex-direction: column;
+        .inputProductColors, .inputProductQuantity {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            font-size: 20px;
+            label {
+            margin-bottom: 10px;
+            }
+            select {
+                padding: 10px;
+                border-radius: 5px;
+                border: solid 3px $colorIcon;
+                font-size: 15px;
+            }
+        }
+        .inputProductColors {
+            margin-top: 10px;
+        }
+        .inputProductQuantity {
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            margin-top: 10px;
+            margin-left: 50px;
+            font-size: 30px;
+            color: $colorIcon;
+        }
+        button {
+            cursor: pointer;
+            font-size: 15px;
+            padding: 15px;
+            border: solid 3px $colorIcon;
+            border-radius: 5px;
+            background: $firstColor;
+            color: black;
+            margin-left: 50px;
+            color: $colorIcon;
+            i {
+                margin-right: 15px;
+            }
+        }
+        .inputProductColors, .inputProductQuantity, button {
+            min-width: 300px;
+            max-width: 300px;
+        }
+    }
+}

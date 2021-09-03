@@ -2,12 +2,25 @@
 /* Colors */
 /* Imports */
 header {
-  padding: 25px 0;
+  padding: 5px 0 5px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #ffdce2;
 }
 
 header h1 {
-  padding-left: 50px;
+  margin-left: 25px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+header i {
+  font-size: 50px;
+  color: #c9707f;
 }
 
 /* Imports */
@@ -28,27 +41,118 @@ header h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 400px;
-  margin: 30px 0 0 50px;
+  margin: 30px 50px 0 50px;
 }
 
 #itemList #itemContainer .item {
-  background: #3f3f3f;
-  color: white;
-  padding-left: 20px;
-  line-height: 50px;
-  height: 50px;
-  width: 80%;
-  border-radius: 10px;
+  padding: 5px;
+  background: #ffdce2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 12px;
+  -webkit-transition: background 300ms;
+  transition: background 300ms;
+}
+
+#itemList #itemContainer .item:hover {
+  background: #ffc3cd;
+}
+
+#itemList #itemContainer .item .itemPhotoTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  margin-left: 12px;
+}
+
+#itemList #itemContainer .item .itemPhotoTitle > img {
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 5px -1px #737373;
+          box-shadow: 0px 0px 5px -1px #737373;
+}
+
+#itemList #itemContainer .item .itemProductTitle {
+  font-size: 25px;
+  color: black;
+}
+
+#itemList #itemContainer .item .itemPrice {
+  font-size: 25px;
+  color: #c9707f;
+  margin-right: 30px;
+  margin-left: 25px;
+}
+
+@media (min-width: 650.1px) {
+  #itemContainer {
+    height: 620px;
+  }
+  #itemContainer .item {
+    height: 100px;
+  }
+  #itemContainer .itemProductTitle {
+    margin-left: 30px;
+  }
+  #itemContainer .itemPhotoTitle {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #itemContainer .itemPhotoTitle > img {
+    height: 100%;
+    min-width: 130px;
+  }
+}
+
+@media (max-width: 650px) {
+  #itemContainer {
+    height: 1250px;
+  }
+  #itemContainer .item {
+    height: 200px;
+  }
+  #itemContainer .itemPhotoTitle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #itemContainer .itemPhotoTitle > img {
+    height: 100%;
+    max-width: 130px;
+  }
 }
 
 /* Colors */
 * {
-  font-family: Helvetica;
+  font-family: "Balsamiq Sans";
+}
+
+h1 {
+  font-family: "Pacifico";
 }
 
 body {
   margin: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Imports */
@@ -58,14 +162,50 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 100px;
+  margin-top: 50px;
   background: #ffdce2;
-  padding: 50px 0 0 50px;
+  padding: 30px 0 30px 50px;
 }
 
 footer .itemFooter {
-  margin-right: 100px;
-  margin-bottom: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 50px;
+  margin-bottom: 5px;
+}
+
+footer p {
+  margin-left: 15px;
+}
+
+footer i {
+  color: #c9707f;
+}
+
+@media (min-width: 500.1px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 /* Imports */
@@ -77,5 +217,101 @@ footer .itemFooter {
 
 #product h2 {
   margin: 50px 0 0 50px;
+}
+
+/* Imports */
+/* Colors */
+/* Imports */
+.sectionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.sectionContainer .teddyProductPhoto {
+  min-height: 400px;
+  max-height: 400px;
+  min-width: 600px;
+  max-width: 600px;
+  -webkit-box-shadow: 0px 0px 5px -1px #737373;
+          box-shadow: 0px 0px 5px -1px #737373;
+  border-radius: 15px;
+}
+
+.sectionContainer .productInfo {
+  margin-top: -45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sectionContainer .productInfo .inputProductColors, .sectionContainer .productInfo .inputProductQuantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.sectionContainer .productInfo .inputProductColors label, .sectionContainer .productInfo .inputProductQuantity label {
+  margin-bottom: 10px;
+}
+
+.sectionContainer .productInfo .inputProductColors select, .sectionContainer .productInfo .inputProductQuantity select {
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 3px #c9707f;
+  font-size: 15px;
+}
+
+.sectionContainer .productInfo .inputProductColors {
+  margin-top: 10px;
+}
+
+.sectionContainer .productInfo .inputProductQuantity {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.sectionContainer .productInfo h2 {
+  font-size: 30px;
+}
+
+.sectionContainer .productInfo p {
+  margin-top: 10px;
+  margin-left: 50px;
+  font-size: 30px;
+  color: #c9707f;
+}
+
+.sectionContainer .productInfo button {
+  cursor: pointer;
+  font-size: 15px;
+  padding: 15px;
+  border: solid 3px #c9707f;
+  border-radius: 5px;
+  background: #ffdce2;
+  color: black;
+  margin-left: 50px;
+  color: #c9707f;
+}
+
+.sectionContainer .productInfo button i {
+  margin-right: 15px;
+}
+
+.sectionContainer .productInfo .inputProductColors, .sectionContainer .productInfo .inputProductQuantity, .sectionContainer .productInfo button {
+  min-width: 300px;
+  max-width: 300px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -10,16 +10,75 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 400px;
-        margin: 30px 0 0 50px;
+        margin: 30px 50px 0 50px;
         .item {
-            background: $colorItem;
-            color: white;
-            padding-left: 20px;
-            line-height: 50px;
-            height: 50px;
-            width: 80%;
-            border-radius: 10px;
+            padding: 5px;
+            background: $firstColor;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 12px;
+            transition: background 300ms;
+            &:hover {
+                background: darken($firstColor, 5%);
+            }
+            .itemPhotoTitle {
+                display: flex;
+                height: 80px;
+                margin-left: 12px;
+                > img {
+                    border-radius: 8px;
+                    box-shadow: 0px 0px 5px -1px #737373;
+                }
+            }
+            .itemProductTitle {
+                font-size: 25px;
+                color: black;
+            }
+            .itemPrice {
+                font-size: 25px;
+                color: $colorIcon;
+                margin-right: 30px;
+                margin-left: 25px;
+            }
         }
     }
 }
+
+@media (min-width: 650.1px) {
+    #itemContainer {
+        height: 620px;
+        .item {
+            height: 100px;
+        }
+        .itemProductTitle {
+            margin-left: 30px;
+        }
+        .itemPhotoTitle {
+            flex-direction: row;
+            align-items: center;
+            > img {
+                height: 100%;
+                min-width: 130px;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    #itemContainer {
+        height: 1250px;
+        .item {
+            height: 200px;
+        }
+        .itemPhotoTitle {
+            flex-direction: column;
+            justify-content: center;
+            > img {
+                height: 100%;
+                max-width: 130px;
+            }
+        }
+    }
+}
+
