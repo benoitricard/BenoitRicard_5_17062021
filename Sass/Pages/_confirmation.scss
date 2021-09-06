@@ -1,0 +1,40 @@
+/* Imports */
+@import "../utils/variables";
+/* Imports */
+
+#confirmation {
+    margin-top: 50px;
+    height: 350px;
+    #confirmationInformations {
+        margin: 50px;
+        .shippingAdressConfirmation {
+            margin-bottom: 5px;
+            color: $colorIcon;
+        }
+        .confirmationNameSurname, .confirmationAdress {
+            display: flex;
+            margin-bottom: -25px;
+        }
+        .confirmationName, .confirmationAdressNumber {
+            margin-right: 7px;
+        }
+    }
+    > p, > h2 {
+        margin-left: 50px;
+    }
+    > p {
+        font-size: 20px;
+        font-style: italic;
+    }
+    .totalPriceConfirmation {
+        margin-left: 50px;
+        display: flex;
+        font-size: 25px;
+        > p {
+            margin-right: 20px;
+        }
+        .totalPriceNumber {
+            color: $colorIcon;
+        }
+    }
+}

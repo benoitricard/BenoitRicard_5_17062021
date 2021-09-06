@@ -1,0 +1,50 @@
+/* Imports */
+@import "../utils/variables";
+/* Imports */
+
+#basketContenu {
+    margin: 50px 50px 75px 50px;
+    #basketTotalPrice {
+        margin-top: 25px;
+        font-size: 25px;
+    }
+    #basketShipping {
+        margin-top: 25px;
+    }
+    .priceColor {
+        color: $colorIcon;
+    }
+}
+
+#basketForm {
+    margin: 0 0 100px 50px;
+    .required {
+        color: red;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    #basketAdressNumber, #basketPostalCode {
+        width: 100px;
+    }
+    form > input {
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        border: solid 3px $colorIcon;
+    }
+    .inputTitleBasket {
+        margin-bottom: 10px;
+    }
+    button {
+        cursor: pointer;
+        font-size: 15px;
+        padding: 15px;
+        width: 200px;
+        border: solid 3px $colorIcon;
+        border-radius: 5px;
+        background: $firstColor;
+        color: black;
+        margin-top: 30px;
+        color: $colorIcon;
+    }
+}

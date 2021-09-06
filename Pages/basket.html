@@ -3,28 +3,138 @@
 
 <head>
 
+    <!-- Browser Compatibility -->
     <meta charset="utf-8">
+    
+    <!-- CSS StyleSheet -->
     <link rel="stylesheet" type="text/css" href="../Sass/main.css">
+    
+    <!-- FontAwesome Library -->
     <script src="https://kit.fontawesome.com/2fda14c063.js" crossorigin="anonymous"></script>
-    <title>Orinoco - Panier</title>
-
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico"> <!-- Pacifico -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans"> <!-- Balsamiq Sans -->
+    
+    <!-- Title -->
+    <title>Orinoco - Basket</title>
+    
 </head>
 
 <body>
 
-    <header>
-        <h1>Orinoco</h1>
-    </header>
 
-    <section id="product">
-        <h2>Panier</h2>
+
+    <!-- Header -->
+    <header>
+
+        <div class="headerLogo">
+            <i class="fas fa-shopping-cart"></i>
+            <h1>Orinoco</h1>
+        </div>
+
+    </header>
+    <!-- Header END -->
+
+
+
+    <!-- Basket -->
+    <section id="basketContenu">
+        <h2>Basket</h2>
+
+        <!-- Basket Product -->
+        <div class="basketProduct">
+            <div class="basketProductLeft">
+                <img class="basketProductPhoto basketProductPhoto1" src="../Images/teddy2.jpg">
+                <div class="basketProductInfo">
+                    <p class="basketProductName">TeddyBear</p>
+                    <p class="basketProductColor">Color: LightBrown</p>
+                </div>
+            </div>
+            <div class="basketProductRight">
+                <p class="basketProductPrice">0,00€</p>
+                <p class="basketProductQuantity">Quantity: 1</p>
+            </div>
+        </div>
+        <!-- Basket Product END -->
+
+        <div id="basketShipping">
+            <p>Shipping: <span class="priceColor">Free</span><br>Estimated time of delivery: <span class="priceColor">3-5 days</p>
+        </div>
+
+        <!-- Total Price -->
+        <div id="basketTotalPrice"> 
+            <p>Total Price: <span class="priceColor">0,00€</span></p>
+        </div>
+        <!-- Total Price END -->
+
     </section>
 
+    <!-- Basket Form -->
+    <section id="basketForm">
+        <h2>Informations</h2>
+        <form>
+
+            <p class="inputTitleBasket inputTitlePseudo">Pseudo</p> <!-- Pseudo -->
+            <input type="text" id="basketPseudo" name="basketPseudo" placeholder="4-12 characters" required minlenght="4" maxlength="12" size="50">
+            <span class="required">Required</span>
+
+            <p class="inputTitleBasket inputTitleName">Name</p> <!-- Name -->
+            <input type="text" id="basketName" name="basketName" placeholder="max 20 characters" required maxlength="20" size="50">
+            <span class="required">Required</span>
+
+            <p class="inputTitleBasket inputTitleSurname">Surname</p> <!-- Surname -->
+            <input type="text" id="basketSurname" name="basketSurname" placeholder="max 20 characters" required maxlength="20" size="50">
+            <span class="required">Required</span>
+            
+            <p class="inputTitleBasket inputTitleAdressNumber">Adress Number</p> <!-- Adress Number -->
+            <input type="number" id="basketAdressNumber" name="basketAdressNumber" required min="1" max="9999">
+            <span class="required">Required</span>
+
+            <p class="inputTitleBasket inputTitleStreetName">Street Name</p> <!-- Street Name -->
+            <input type="text" id="basketStreetName" name="basketStreetName" required maxlenght="50" size="50">
+            <span class="required">Required</span>
+
+            <p class="inputTitleBasket inputTitlePostalCode">Postal Code</p> <!-- Postal Code -->
+            <input type="number" id="basketPostalCode" name="basketPostalCode" placeholder="5 numbers" required min="00001" max="99999">
+            <span class="required">Required</span>
+
+        </form>
+
+        <button id="basketSubmitButton">Confirm</button> <!-- Confirmation Button -->
+
+    </section>
+    <!-- Basket Form END -->
+    <!-- Basket END -->
+    
+
+
+
+    <!-- Footer -->
     <footer>
-        <div class="itemFooter itemFooter1">Contact</div>
-        <div class="itemFooter itemFooter2">Ressources</div>
-        <div class="itemFooter itemFooter3">Aide</div>
+
+        <!-- ItemFooter #1 -->
+        <div class="itemFooter itemFooter1">
+            <i class="fas fa-envelope"></i>
+            <p>Contact</p>
+        </div>
+
+        <!-- ItemFooter #2 -->
+        <div class="itemFooter itemFooter2">
+            <i class="fas fa-file"></i>
+            <p>Ressources</p>
+        </div>
+
+        <!-- ItemFooter #3 -->
+        <div class="itemFooter itemFooter3">
+            <i class="fas fa-question-circle"></i>
+            <p>Aide</p>
+        </div>
+
     </footer>
+    <!-- Footer END -->
+
+
 
 </body>
 

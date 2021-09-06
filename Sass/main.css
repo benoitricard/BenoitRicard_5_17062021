@@ -9,13 +9,40 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #ffdce2;
+}
+
+header .headerLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .headerBasket {
+  text-align: center;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 10px;
+  background: #c9707f;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 50px;
+  width: 100px;
 }
 
 header h1 {
   margin-left: 25px;
   font-size: 50px;
-  cursor: pointer;
 }
 
 header i {
@@ -313,5 +340,162 @@ footer i {
 .sectionContainer .productInfo .inputProductColors, .sectionContainer .productInfo .inputProductQuantity, .sectionContainer .productInfo button {
   min-width: 300px;
   max-width: 300px;
+}
+
+/* Imports */
+/* Colors */
+/* Imports */
+#basketContenu {
+  margin: 50px 50px 75px 50px;
+}
+
+#basketContenu #basketTotalPrice {
+  margin-top: 25px;
+  font-size: 25px;
+}
+
+#basketContenu #basketShipping {
+  margin-top: 25px;
+}
+
+#basketContenu .priceColor {
+  color: #c9707f;
+}
+
+#basketForm {
+  margin: 0 0 100px 50px;
+}
+
+#basketForm .required {
+  color: red;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+#basketForm #basketAdressNumber, #basketForm #basketPostalCode {
+  width: 100px;
+}
+
+#basketForm form > input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 3px #c9707f;
+}
+
+#basketForm .inputTitleBasket {
+  margin-bottom: 10px;
+}
+
+#basketForm button {
+  cursor: pointer;
+  font-size: 15px;
+  padding: 15px;
+  width: 200px;
+  border: solid 3px #c9707f;
+  border-radius: 5px;
+  background: #ffdce2;
+  color: black;
+  margin-top: 30px;
+  color: #c9707f;
+}
+
+/* Imports */
+/* Colors */
+/* Imports */
+#confirmation {
+  margin-top: 50px;
+  height: 350px;
+}
+
+#confirmation #confirmationInformations {
+  margin: 50px;
+}
+
+#confirmation #confirmationInformations .shippingAdressConfirmation {
+  margin-bottom: 5px;
+  color: #c9707f;
+}
+
+#confirmation #confirmationInformations .confirmationNameSurname, #confirmation #confirmationInformations .confirmationAdress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: -25px;
+}
+
+#confirmation #confirmationInformations .confirmationName, #confirmation #confirmationInformations .confirmationAdressNumber {
+  margin-right: 7px;
+}
+
+#confirmation > p, #confirmation > h2 {
+  margin-left: 50px;
+}
+
+#confirmation > p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+#confirmation .totalPriceConfirmation {
+  margin-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+}
+
+#confirmation .totalPriceConfirmation > p {
+  margin-right: 20px;
+}
+
+#confirmation .totalPriceConfirmation .totalPriceNumber {
+  color: #c9707f;
+}
+
+/* Imports */
+/* Colors */
+/* Imports */
+.basketProduct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: solid 3px black;
+  border-radius: 10px;
+  height: 100px;
+}
+
+.basketProduct .basketProductLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.basketProduct .basketProductLeft .basketProductPhoto {
+  border-radius: 10px 0 0 10px;
+}
+
+.basketProduct .basketProductRight {
+  margin-top: 8px;
+  margin-right: 25px;
+}
+
+.basketProduct .basketProductRight .basketProductPrice {
+  color: #c9707f;
+  font-size: 15px;
+}
+
+.basketProduct img {
+  height: 100%;
+  min-width: 130px;
+  max-width: 130px;
+}
+
+.basketProduct .basketProductInfo {
+  margin-top: 8px;
+  margin-left: 25px;
 }
 /*# sourceMappingURL=main.css.map */
