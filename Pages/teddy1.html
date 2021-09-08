@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans"> <!-- Balsamiq Sans -->
     
     <!-- Title -->
-    <title>Orinoco - Fiche Produit (Brown TeddyBear)</title>
+    <title>Orinoco - Fiche Produit (Teddy0)</title>
     
 </head>
 
@@ -33,9 +33,13 @@
             <h1>Orinoco</h1>
         </div>
 
-        <a class="headerBasket" href="../Pages/basket.html">
-            <p>Basket</p>
-        </a>
+        <div class="headerBtns">
+
+            <a class="headerHome" href="../index.html">Home</a>
+
+            <a class="headerBasket" href="../Pages/basket.html">Basket</a>
+             
+        </div>
 
     </header>
     <!-- Header END -->
@@ -47,35 +51,25 @@
         <div class="sectionContainer">
 
             <!-- Product Photo -->
-            <img src="../Images/teddy1.jpg" class="teddyProductPhoto">
+            <img src="../Images/teddy1.jpg" class="productPhoto productPhoto0">
 
             <!-- Product Info -->
             <div class="productInfo">
-                <h2>Brown TeddyBear</h2> <!-- Product Title -->
-                <p class="productPrice">25,99€</p> <!-- Product Price -->
+                <h2 class="productName productName0">Product0</h2> <!-- Product Title -->
+                <p class="id">ID: <span class="productId productId0">5be9c8541c9d440000665243</span></p> <!-- Product ID -->
+                <p class="productPrice productPrice0">00,00€</p> <!-- Product Price -->
+                <p class="productDescription productDescription0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <!-- Product Description -->
 
                 <div class="inputProductColors"> <!-- Product Colors Selector -->
                     <label for="colors">Colors</label>
                     <select name="colors" class="colorSelector">
-                        <option value="">Personalize</option>
-                        <option value="brown">Brown</option>
-                        <option value="lightbrown">LightBrown</option>
-                        <option value="white">White</option>
+                        <option value="color0">0</option>
+                        <option value="color1">1</option>
+                        <option value="color2">2</option>
                     </select>
                 </div>
 
-                <div class="inputProductQuantity"> <!-- Product Quantity Selector -->
-                    <label for="quantity">Quantity</label>
-                    <select name="quantity" class="quantitySelector">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-
-                <button class="addBasket"><i class="fas fa-shopping-cart"></i>Add to Basket</button> <!-- Product Button -->
+                <button class="addBasket"><i class="fas fa-shopping-cart"></i>Add to Basket</button> <!-- 'Add to Basket' Button -->
 
             </div>
         </div>

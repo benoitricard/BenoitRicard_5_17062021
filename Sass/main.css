@@ -24,22 +24,6 @@ header .headerLogo {
           align-items: center;
 }
 
-header .headerBasket {
-  text-align: center;
-  cursor: pointer;
-  font-size: 17px;
-  border-radius: 10px;
-  background: #c9707f;
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: 50px;
-  width: 100px;
-}
-
 header h1 {
   margin-left: 25px;
   font-size: 50px;
@@ -238,26 +222,14 @@ footer i {
 /* Imports */
 /* Colors */
 /* Imports */
-#product {
-  height: 400px;
-}
-
-#product h2 {
-  margin: 50px 0 0 50px;
-}
-
-/* Imports */
-/* Colors */
-/* Imports */
 .sectionContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin: 50px;
 }
 
-.sectionContainer .teddyProductPhoto {
+.sectionContainer .productPhoto {
   min-height: 400px;
   max-height: 400px;
   min-width: 600px;
@@ -268,7 +240,8 @@ footer i {
 }
 
 .sectionContainer .productInfo {
-  margin-top: -45px;
+  margin-left: 50px;
+  margin-top: -20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,7 +251,25 @@ footer i {
           flex-direction: column;
 }
 
-.sectionContainer .productInfo .inputProductColors, .sectionContainer .productInfo .inputProductQuantity {
+.sectionContainer .productInfo .id {
+  font-size: 12px;
+  margin-top: -20px;
+  color: #bfbfbf;
+}
+
+.sectionContainer .productInfo .productPrice {
+  font-size: 30px;
+  margin-top: 10px;
+  color: #c9707f;
+}
+
+.sectionContainer .productInfo .productDescription {
+  font-size: 15px;
+  margin: -10px 50px 20px 0;
+  color: black;
+}
+
+.sectionContainer .productInfo .inputProductColors {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,15 +277,15 @@ footer i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 50px;
+  margin: 0 0 25px 0;
   font-size: 20px;
 }
 
-.sectionContainer .productInfo .inputProductColors label, .sectionContainer .productInfo .inputProductQuantity label {
+.sectionContainer .productInfo .inputProductColors label {
   margin-bottom: 10px;
 }
 
-.sectionContainer .productInfo .inputProductColors select, .sectionContainer .productInfo .inputProductQuantity select {
+.sectionContainer .productInfo .inputProductColors select {
   padding: 10px;
   border-radius: 5px;
   border: solid 3px #c9707f;
@@ -305,20 +296,8 @@ footer i {
   margin-top: 10px;
 }
 
-.sectionContainer .productInfo .inputProductQuantity {
-  margin-bottom: 30px;
-  margin-top: 20px;
-}
-
 .sectionContainer .productInfo h2 {
   font-size: 30px;
-}
-
-.sectionContainer .productInfo p {
-  margin-top: 10px;
-  margin-left: 50px;
-  font-size: 30px;
-  color: #c9707f;
 }
 
 .sectionContainer .productInfo button {
@@ -329,7 +308,6 @@ footer i {
   border-radius: 5px;
   background: #ffdce2;
   color: black;
-  margin-left: 50px;
   color: #c9707f;
 }
 
@@ -337,7 +315,7 @@ footer i {
   margin-right: 15px;
 }
 
-.sectionContainer .productInfo .inputProductColors, .sectionContainer .productInfo .inputProductQuantity, .sectionContainer .productInfo button {
+.sectionContainer .productInfo .inputProductColors, .sectionContainer .productInfo button {
   min-width: 300px;
   max-width: 300px;
 }
@@ -465,7 +443,8 @@ footer i {
           justify-content: space-between;
   border: solid 3px black;
   border-radius: 10px;
-  height: 100px;
+  height: 110px;
+  margin-bottom: 15px;
 }
 
 .basketProduct .basketProductLeft {
@@ -476,26 +455,47 @@ footer i {
 
 .basketProduct .basketProductLeft .basketProductPhoto {
   border-radius: 10px 0 0 10px;
-}
-
-.basketProduct .basketProductRight {
-  margin-top: 8px;
-  margin-right: 25px;
-}
-
-.basketProduct .basketProductRight .basketProductPrice {
-  color: #c9707f;
-  font-size: 15px;
-}
-
-.basketProduct img {
   height: 100%;
-  min-width: 130px;
-  max-width: 130px;
+  min-width: 150px;
+  max-width: 150px;
 }
 
-.basketProduct .basketProductInfo {
-  margin-top: 8px;
+.basketProduct .basketProductLeft .basketProductInfo {
+  margin-top: 3px;
   margin-left: 25px;
+}
+
+.basketProduct .basketProductLeft .productId {
+  margin-top: -10px;
+  font-size: 12px;
+  color: grey;
+}
+
+.basketProduct .productPrice {
+  margin: 42px 25px 0 30px;
+  color: #c9707f;
+  font-size: 20px;
+}
+
+.headerBasket {
+  text-align: center;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 10px;
+  background: #c9707f;
+  color: white;
+  padding: 20px 30px;
+  margin-right: 50px;
+}
+
+.headerHome {
+  text-align: center;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 10px;
+  background: #c9707f;
+  color: white;
+  padding: 20px 30px;
+  margin-right: 25px;
 }
 /*# sourceMappingURL=main.css.map */

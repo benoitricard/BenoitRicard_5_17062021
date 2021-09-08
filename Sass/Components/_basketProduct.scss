@@ -7,28 +7,29 @@
     justify-content: space-between;
     border: solid 3px black;
     border-radius: 10px;
-    height: 100px;
+    height: 110px;
+    margin-bottom: 15px;
     .basketProductLeft {
         display: flex;
         .basketProductPhoto {
             border-radius: 10px 0 0 10px;
+            height: 100%;
+            min-width: 150px;
+            max-width: 150px;
+        }
+        .basketProductInfo {
+            margin-top: 3px;
+            margin-left: 25px;
+        }
+        .productId {
+            margin-top: -10px;
+            font-size: 12px;
+            color: grey;
         }
     }
-    .basketProductRight {
-        margin-top: 8px;
-        margin-right: 25px;
-        .basketProductPrice {
-            color: $colorIcon;
-            font-size: 15px;
-        }
-    }
-    img {
-        height: 100%;
-        min-width: 130px;
-        max-width: 130px;
-    }
-    .basketProductInfo {
-        margin-top: 8px;
-        margin-left: 25px;
+    .productPrice {
+        margin: 42px 25px 0 30px;
+        color: $colorIcon;
+        font-size: 20px;
     }
 }
