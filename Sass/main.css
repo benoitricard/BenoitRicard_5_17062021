@@ -37,11 +37,11 @@ header i {
 /* Imports */
 /* Colors */
 /* Imports */
-#itemList h2 {
+#teddiesList h2 {
   margin: 50px 0 0 50px;
 }
 
-#itemList #itemContainer {
+#teddiesList #teddiesContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,11 +52,12 @@ header i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 30px 50px 0 50px;
+  margin: 30px 50px 50px 50px;
 }
 
-#itemList #itemContainer .item {
-  padding: 5px;
+#teddiesList #teddiesContainer .teddyProduct {
+  margin: 10px 0;
+  padding: 15px 5px;
   background: #ffdce2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,11 +73,11 @@ header i {
   transition: background 300ms;
 }
 
-#itemList #itemContainer .item:hover {
+#teddiesList #teddiesContainer .teddyProduct:hover {
   background: #ffc3cd;
 }
 
-#itemList #itemContainer .item .itemPhotoTitle {
+#teddiesList #teddiesContainer .teddyProduct .imageAndName {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,69 +85,23 @@ header i {
   margin-left: 12px;
 }
 
-#itemList #itemContainer .item .itemPhotoTitle > img {
+#teddiesList #teddiesContainer .teddyProduct .imageAndName > img {
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 5px -1px #737373;
           box-shadow: 0px 0px 5px -1px #737373;
 }
 
-#itemList #itemContainer .item .itemProductTitle {
+#teddiesList #teddiesContainer .teddyProduct .imageAndName .teddyName {
+  margin-left: 25px;
   font-size: 25px;
   color: black;
 }
 
-#itemList #itemContainer .item .itemPrice {
+#teddiesList #teddiesContainer .teddyProduct .teddyPrice {
   font-size: 25px;
   color: #c9707f;
   margin-right: 30px;
   margin-left: 25px;
-}
-
-@media (min-width: 650.1px) {
-  #itemContainer {
-    height: 620px;
-  }
-  #itemContainer .item {
-    height: 100px;
-  }
-  #itemContainer .itemProductTitle {
-    margin-left: 30px;
-  }
-  #itemContainer .itemPhotoTitle {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #itemContainer .itemPhotoTitle > img {
-    height: 100%;
-    min-width: 130px;
-  }
-}
-
-@media (max-width: 650px) {
-  #itemContainer {
-    height: 1250px;
-  }
-  #itemContainer .item {
-    height: 200px;
-  }
-  #itemContainer .itemPhotoTitle {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  #itemContainer .itemPhotoTitle > img {
-    height: 100%;
-    max-width: 130px;
-  }
 }
 
 /* Colors */
@@ -222,14 +177,14 @@ footer i {
 /* Imports */
 /* Colors */
 /* Imports */
-.sectionContainer {
+#sectionContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 50px;
 }
 
-.sectionContainer .productPhoto {
+#sectionContainer .teddyImage {
   min-height: 400px;
   max-height: 400px;
   min-width: 600px;
@@ -239,7 +194,7 @@ footer i {
   border-radius: 15px;
 }
 
-.sectionContainer .productInfo {
+#sectionContainer .productInfo {
   margin-left: 50px;
   margin-top: -20px;
   display: -webkit-box;
@@ -251,25 +206,25 @@ footer i {
           flex-direction: column;
 }
 
-.sectionContainer .productInfo .id {
+#sectionContainer .productInfo .teddyId {
   font-size: 12px;
   margin-top: -20px;
   color: #bfbfbf;
 }
 
-.sectionContainer .productInfo .productPrice {
+#sectionContainer .productInfo .teddyPrice {
   font-size: 30px;
   margin-top: 10px;
   color: #c9707f;
 }
 
-.sectionContainer .productInfo .productDescription {
+#sectionContainer .productInfo .teddyDescription {
   font-size: 15px;
   margin: -10px 50px 20px 0;
   color: black;
 }
 
-.sectionContainer .productInfo .inputProductColors {
+#sectionContainer .productInfo .teddyColors {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,30 +232,26 @@ footer i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 0 25px 0;
+  margin: 10px 0 25px 0;
   font-size: 20px;
 }
 
-.sectionContainer .productInfo .inputProductColors label {
+#sectionContainer .productInfo .teddyColors label {
   margin-bottom: 10px;
 }
 
-.sectionContainer .productInfo .inputProductColors select {
+#sectionContainer .productInfo .teddyColors select {
   padding: 10px;
   border-radius: 5px;
   border: solid 3px #c9707f;
   font-size: 15px;
 }
 
-.sectionContainer .productInfo .inputProductColors {
-  margin-top: 10px;
-}
-
-.sectionContainer .productInfo h2 {
+#sectionContainer .productInfo h2 {
   font-size: 30px;
 }
 
-.sectionContainer .productInfo button {
+#sectionContainer .productInfo .addBasket {
   cursor: pointer;
   font-size: 15px;
   padding: 15px;
@@ -311,11 +262,11 @@ footer i {
   color: #c9707f;
 }
 
-.sectionContainer .productInfo button i {
+#sectionContainer .productInfo .addBasket i {
   margin-right: 15px;
 }
 
-.sectionContainer .productInfo .inputProductColors, .sectionContainer .productInfo button {
+#sectionContainer .productInfo .teddyColors, #sectionContainer .productInfo button {
   min-width: 300px;
   max-width: 300px;
 }

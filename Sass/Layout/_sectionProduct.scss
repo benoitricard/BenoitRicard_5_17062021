@@ -2,10 +2,10 @@
 @import "../utils/variables";
 /* Imports */
 
-.sectionContainer {
+#sectionContainer {
     display: flex;
     margin: 50px;
-    .productPhoto {
+    .teddyImage {
     min-height: 400px;
     max-height: 400px;
     min-width: 600px;
@@ -18,25 +18,25 @@
         margin-top: -20px;
         display: flex;
         flex-direction: column;
-        .id {
+        .teddyId {
             font-size: 12px;
             margin-top: -20px;
             color: #bfbfbf;
         }
-        .productPrice {
+        .teddyPrice {
             font-size: 30px;
             margin-top: 10px;
             color: $colorIcon;
         }
-        .productDescription {
+        .teddyDescription {
             font-size: 15px;
             margin: -10px 50px 20px 0;
             color: black;
         }
-        .inputProductColors {
+        .teddyColors {
             display: flex;
             flex-direction: column;
-            margin: 0 0 25px 0;
+            margin: 10px 0 25px 0;
             font-size: 20px;
             label {
             margin-bottom: 10px;
@@ -48,13 +48,10 @@
                 font-size: 15px;
             }
         }
-        .inputProductColors {
-            margin-top: 10px;
-        }
         h2 {
             font-size: 30px;
         }
-        button {
+        .addBasket {
             cursor: pointer;
             font-size: 15px;
             padding: 15px;
@@ -67,7 +64,7 @@
                 margin-right: 15px;
             }
         }
-        .inputProductColors, button {
+        .teddyColors, button {
             min-width: 300px;
             max-width: 300px;
         }

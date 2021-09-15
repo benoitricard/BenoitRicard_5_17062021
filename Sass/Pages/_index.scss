@@ -2,17 +2,18 @@
 @import "../utils/variables";
 /* Imports */
 
-#itemList {
+#teddiesList {
     h2 {
         margin: 50px 0 0 50px;
     }
-    #itemContainer {
+    #teddiesContainer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 30px 50px 0 50px;
-        .item {
-            padding: 5px;
+        margin: 30px 50px 50px 50px;
+        .teddyProduct {
+            margin: 10px 0;
+            padding: 15px 5px;
             background: $firstColor;
             display: flex;
             align-items: center;
@@ -22,7 +23,7 @@
             &:hover {
                 background: darken($firstColor, 5%);
             }
-            .itemPhotoTitle {
+            .imageAndName {
                 display: flex;
                 height: 80px;
                 margin-left: 12px;
@@ -30,53 +31,17 @@
                     border-radius: 8px;
                     box-shadow: 0px 0px 5px -1px #737373;
                 }
+                .teddyName {
+                    margin-left: 25px;
+                    font-size: 25px;
+                    color: black;
+                }
             }
-            .itemProductTitle {
-                font-size: 25px;
-                color: black;
-            }
-            .itemPrice {
+            .teddyPrice {
                 font-size: 25px;
                 color: $colorIcon;
                 margin-right: 30px;
                 margin-left: 25px;
-            }
-        }
-    }
-}
-
-@media (min-width: 650.1px) {
-    #itemContainer {
-        height: 620px;
-        .item {
-            height: 100px;
-        }
-        .itemProductTitle {
-            margin-left: 30px;
-        }
-        .itemPhotoTitle {
-            flex-direction: row;
-            align-items: center;
-            > img {
-                height: 100%;
-                min-width: 130px;
-            }
-        }
-    }
-}
-
-@media (max-width: 650px) {
-    #itemContainer {
-        height: 1250px;
-        .item {
-            height: 200px;
-        }
-        .itemPhotoTitle {
-            flex-direction: column;
-            justify-content: center;
-            > img {
-                height: 100%;
-                max-width: 130px;
             }
         }
     }
