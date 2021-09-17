@@ -51,7 +51,7 @@
         h2 {
             font-size: 30px;
         }
-        .addBasket {
+        #addBasket {
             cursor: pointer;
             font-size: 15px;
             padding: 15px;
@@ -60,6 +60,14 @@
             background: $firstColor;
             color: black;
             color: $colorIcon;
+            &:hover {
+                background: darken($firstColor, 5%);
+                border: solid 3px darken($colorIcon, 5%);
+            }
+            &:active {
+                background: darken($firstColor, 8%);
+                border: solid 3px darken($colorIcon, 8%);
+            }
             i {
                 margin-right: 15px;
             }

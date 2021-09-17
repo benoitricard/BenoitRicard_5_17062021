@@ -1,9 +1,10 @@
-// Appel de l'API des Teddies
+'use strict'
 
 // Récupération de l'URL avec l'ID de la peluche en paramètre
 let param = new URLSearchParams(window.location.search);
 let id = param.get('id');
 
+// Appel de l'API des Teddies
 fetch(`http://localhost:3000/api/teddies/${id}`)
 .then(function(res) {
     if (res.ok) {
@@ -12,11 +13,16 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
 })
 .then(function(value) {
 
+    
+    // Tableau du contenu de mon storage
+    const storage = new Storage('basket')
+    const basket = storage.list
 
     // Variables
     const teddy = value;
     console.log(teddy)
 
+    // Page produit
     const section = document.getElementById('sectionContainer')
     section.innerHTML = `<img class="teddyImage" src="${teddy.imageUrl}" alt="teddybear">
     <div class="productInfo">
@@ -29,15 +35,23 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
             <select id="select" name="teddyColorsInput">
             </select>
         </div>
-        <button class="addBasket"><i class="fas fa-shopping-cart"></i>Add to Basket</button>
+        <button id="addBasket"><i class="fas fa-shopping-cart"></i>Add to Basket</button>
     </div>`
 
+    // Récupération des couleurs
     const select = document.getElementById('select')
     for (let i = 0; i < teddy.colors.length; i++) {
         const option = document.createElement('option')
         option.innerHTML = teddy.colors[i]
         select.appendChild(option)
     }
+
+    // Bouton 'Add to Basket'
+    const button = document.getElementById('addBasket')
+    function addToBasket() {
+        storage.set(teddy)
+    }
+    button.addEventListener('click', addToBasket)
 
 
 })

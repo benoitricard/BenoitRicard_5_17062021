@@ -1,3 +1,5 @@
+'use strict'
+
 // Appel de l'API des Teddies
 
 fetch('http://localhost:3000/api/teddies')
@@ -9,11 +11,9 @@ fetch('http://localhost:3000/api/teddies')
 .then(function(value) {
 
 
-
     // Variables
     const teddiesTab = value;
     const teddiesContainer = document.getElementById('teddiesContainer')
-
 
     // Boucle pour créer les cartes Teddies en index
     for(let i = 0; i < teddiesTab.length; i++) { 
@@ -29,7 +29,6 @@ fetch('http://localhost:3000/api/teddies')
             </a>`;
         teddiesContainer.innerHTML += teddyItem
     }
-
 
 
 })

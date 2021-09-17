@@ -11,8 +11,8 @@
 
     <!-- JS files -->
     <script src="https://kit.fontawesome.com/2fda14c063.js" crossorigin="anonymous"></script>
-    <script src="./JS/basket.js"></script>
-    <script src="./JS/main.js"></script>
+    <script defer src="../JS/basket.js"></script>
+    <script defer src="../JS/storage.js"></script>
     
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico"> <!-- Pacifico -->
@@ -35,12 +35,6 @@
             <h1>Orinoco</h1>
         </div>
 
-        <div class="headerBtns">
-
-            <a class="headerBasket" href="../index.html">Home</a>
-             
-        </div>
-
     </header>
     <!-- Header END -->
 
@@ -50,64 +44,42 @@
     <section id="basketContenu">
         <h2>Basket</h2>
 
-        <!-- Basket Product -->
-        <div class="basketProduct">
-            <div class="basketProductLeft">
-                <img class="basketProductPhoto basketProductPhoto1" src="../Images/teddy2.jpg">
-                <div class="basketProductInfo">
-                    <p class="itemProductName itemProductName0">Teddy0</p>
-                    <p class="productId">ID: 5be9c8541c9d440000665243</p>
-                    <p class="basketProductColor">Color: 0</p>
-                </div>
-            </div>
-            <p class="productPrice productPrice0">00,00€</p>
-        </div>
-        <!-- Basket Product END -->
-
-        <div id="basketShipping">
-            <p>Shipping: <span class="priceColor">Free</span><br>Estimated time of delivery: <span class="priceColor">3-5 days</p>
-        </div>
-
-        <!-- Total Price -->
-        <div id="basketTotalPrice"> 
-            <p>Total Price: <span class="priceColor">0,00€</span></p>
-        </div>
-        <!-- Total Price END -->
-
     </section>
+
+    <!-- Total Price -->
+    <div id="basketTotalPrice"> 
+        <p>Total Price: <span id="totalPrice" class="priceColor">0€</span></p>
+    </div>
+    <!-- Total Price END -->
 
     <!-- Basket Form -->
     <section id="basketForm">
         <h2>Informations</h2>
         <form>
 
-            <p class="inputTitleBasket inputTitlePseudo">Pseudo</p> <!-- Pseudo -->
-            <input type="text" id="basketPseudo" name="basketPseudo" placeholder="4-12 characters" required minlenght="4" maxlength="12" size="50">
+            <p class="inputTitleBasket inputTitleFirstName">First Name</p> <!-- First Name -->
+            <input type="text" id="formFirstName" required maxlength="25" size="50">
             <span class="required">Required</span>
 
-            <p class="inputTitleBasket inputTitleName">Name</p> <!-- Name -->
-            <input type="text" id="basketName" name="basketName" placeholder="max 20 characters" required maxlength="20" size="50">
+            <p class="inputTitleBasket inputTitleLastName">Last Name</p> <!-- Last Name -->
+            <input type="text" id="formLastName" required maxlength="25" size="50">
             <span class="required">Required</span>
 
-            <p class="inputTitleBasket inputTitleSurname">Surname</p> <!-- Surname -->
-            <input type="text" id="basketSurname" name="basketSurname" placeholder="max 20 characters" required maxlength="20" size="50">
+            <p class="inputTitleBasket inputTitleAdress">Adress</p> <!-- Adress -->
+            <input type="text" id="formAdress" required maxlength="50" size="50">
             <span class="required">Required</span>
             
-            <p class="inputTitleBasket inputTitleAdressNumber">Adress Number</p> <!-- Adress Number -->
-            <input type="number" id="basketAdressNumber" name="basketAdressNumber" required min="1" max="9999">
+            <p class="inputTitleBasket inputTitleCity">City</p> <!-- City -->
+            <input type="text" id="formCity" required maxlength="25" size="50">
             <span class="required">Required</span>
 
-            <p class="inputTitleBasket inputTitleStreetName">Street Name</p> <!-- Street Name -->
-            <input type="text" id="basketStreetName" name="basketStreetName" required maxlenght="50" size="50">
-            <span class="required">Required</span>
-
-            <p class="inputTitleBasket inputTitlePostalCode">Postal Code</p> <!-- Postal Code -->
-            <input type="number" id="basketPostalCode" name="basketPostalCode" placeholder="5 numbers" required min="00001" max="99999">
+            <p class="inputTitleBasket inputTitleEmail">Email</p> <!-- Email -->
+            <input type="text" id="formEmail" required maxlenght="50" size="50">
             <span class="required">Required</span>
 
         </form>
 
-        <button id="basketSubmitButton">Confirm</button> <!-- Confirmation Button -->
+        <button type="submit" id="submitButton">Confirm</button> <!-- Confirmation Button -->
 
     </section>
     <!-- Basket Form END -->

@@ -27,9 +27,31 @@
             color: grey;
         }
     }
-    .productPrice {
-        margin: 42px 25px 0 30px;
-        color: $colorIcon;
-        font-size: 20px;
+    .basketProductRight {
+        display: flex;
+        align-items: center;
+        margin-right: 25px;
+        .productPrice {
+            margin-right: 25px;
+            color: $colorIcon;
+            font-size: 25px;
+        }
+        button {
+            cursor: pointer;
+            font-size: 15px;
+            padding: 10px;
+            border: solid 3px $colorIcon;
+            border-radius: 5px;
+            background: $firstColor;
+            color: $colorIcon;
+            &:hover {
+                background: darken($firstColor, 5%);
+                border: solid 3px darken($colorIcon, 5%);
+            }
+            &:active {
+                background: darken($firstColor, 8%);
+                border: solid 3px darken($colorIcon, 8%);
+            }
+        }
     }
 }

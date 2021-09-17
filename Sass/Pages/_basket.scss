@@ -3,19 +3,18 @@
 /* Imports */
 
 #basketContenu {
-    margin: 50px 50px 75px 50px;
-    #basketTotalPrice {
-        margin-top: 25px;
-        font-size: 25px;
-    }
-    #basketShipping {
-        margin-top: 25px;
-    }
-    .priceColor {
+    margin: 50px 50px 50px 50px;
+}
+.priceColor {
         color: $colorIcon;
     }
-}
-
+#basketTotalPrice {
+        margin: 25px 0 50px 50px;
+        font-size: 25px;
+        #totalPrice {
+            margin-left: 10px;
+        }
+    }
 #basketForm {
     margin: 0 0 100px 50px;
     .required {
