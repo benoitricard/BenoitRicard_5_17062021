@@ -48,10 +48,10 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
 
     // Bouton 'Add to Basket'
     const button = document.getElementById('addBasket')
-    function addToBasket() {
+    
+    button.addEventListener('click', function () {
         storage.set(teddy)
-    }
-    button.addEventListener('click', addToBasket)
+    })
 
 
 })

@@ -20,41 +20,57 @@ fetch('http://localhost:3000/api/teddies')
     const basket = storage.list
 
     // Variables du panier
-    let basketProduct = '' // Contenu du panier
+    let basketProduct = '' // Produit du panier
     let totalPrice = 0 // Prix total du panier
+
+    // Prix total du panier
+    function priceBalance(value) {
+        totalPrice += value
+    }
+
+    // Supprimer un objet du panier
+    function removeBasket(value) {
+        const ancestor = value.parentElement
+        value.addEventListener('click', function() {
+            ancestor.innerHTML = ''
+            priceBalance()
+        })
+    }
 
     // Boucle pour créer les cartes produit dans le panier
     for(let i = 0; i < basket.length; i++) { 
         basketProduct =
-            `<div class="basketProduct">
+            `<div class="basketProduct" id="basketProduct">
                 <div class="basketProductLeft">
                     <img class="basketProductPhoto" src="${basket[i].imageUrl}">
                     <div class="basketProductInfo">
                         <p class="itemProductName">${basket[i].name}</p>
                         <p class="productId">ID: ${basket[i]._id}</p>
-                        <p class="basketProductColor">Color: 0</p>
+                        <p class="basketProductColor">Color:</p>
                     </div>
                 </div>
-                <div class="basketProductRight" id="basketProductRight${i}">
+                <div class="basketProductRight" id="basketProductRight${[i]}">
                     <p class="productPrice">${basket[i].price}€</p>
                 </div>
             </div>`;
-            basketContenu.innerHTML += basketProduct
 
-            const removeParent = document.getElementById(`basketProductRight${i}`)
+        basketContenu.innerHTML += basketProduct
 
-            const remove = document.createElement('button')
-            remove.innerHTML = `<i class="fas fa-trash-alt"></i>`
+        priceBalance(basket[i].price)
 
-            removeParent.appendChild(remove)
-    
-            remove.addEventListener('click', () => {
-                const value = removeParent.parentNode
-                storage.remove(value)
-                basketContenu.removeChild(removeParent.parentNode)
-            })
+        const basketRight = document.getElementById(`basketProductRight${[i]}`)
+        const remove = document.createElement('button')
 
-        totalPrice += basket[i].price
+        remove.innerHTML = `<i class="fas fa-trash-alt"></i>`
+
+        remove.addEventListener('click', function() {
+            const basketItem = remove.parentElement.parentElement
+            storage.remove(basketItem)
+            basketContenu.removeChild(basketItem)
+            priceBalance()
+        })
+
+        basketRight.appendChild(remove)
     }
 
     // Prix total du panier
