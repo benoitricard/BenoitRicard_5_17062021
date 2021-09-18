@@ -23,20 +23,6 @@ fetch('http://localhost:3000/api/teddies')
     let basketProduct = '' // Produit du panier
     let totalPrice = 0 // Prix total du panier
 
-    // Prix total du panier
-    function priceBalance(value) {
-        totalPrice += value
-    }
-
-    // Supprimer un objet du panier
-    function removeBasket(value) {
-        const ancestor = value.parentElement
-        value.addEventListener('click', function() {
-            ancestor.innerHTML = ''
-            priceBalance()
-        })
-    }
-
     // Boucle pour créer les cartes produit dans le panier
     for(let i = 0; i < basket.length; i++) { 
         basketProduct =
@@ -56,7 +42,9 @@ fetch('http://localhost:3000/api/teddies')
 
         basketContenu.innerHTML += basketProduct
 
-        priceBalance(basket[i].price)
+        function priceBalance() {
+            totalPrice += basket[i].price
+        } priceBalance()
 
         const basketRight = document.getElementById(`basketProductRight${[i]}`)
         const remove = document.createElement('button')
