@@ -13,14 +13,13 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
 })
 .then(function(value) {
 
-    
-    // Tableau du contenu de mon storage
-    const storage = new Storage('basket')
-    const basket = storage.list
 
     // Variables
-    const teddy = value;
-    console.log(teddy)
+    let basket = JSON.parse(localStorage.getItem('basket'))
+    if (basket === null) {
+        basket = []
+    }
+    const teddy = value
 
     // Page produit
     const section = document.getElementById('sectionContainer')
@@ -50,7 +49,8 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
     const button = document.getElementById('addBasket')
     
     button.addEventListener('click', function () {
-        storage.set(teddy)
+        basket.push(teddy)
+        localStorage.setItem('basket', JSON.stringify(basket))
     })
 
 

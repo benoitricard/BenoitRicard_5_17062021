@@ -14,10 +14,8 @@ fetch('http://localhost:3000/api/teddies')
 })
 .then(function(value) {
 
-
-    // Tableau du contenu de mon storage
-    const storage = new Storage('basket')
-    const basket = storage.list
+    // Variables
+    let basket = JSON.parse(localStorage.getItem('basket'))
 
     // Variables du panier
     let basketProduct = '' // Produit du panier
@@ -35,30 +33,29 @@ fetch('http://localhost:3000/api/teddies')
                         <p class="basketProductColor">Color:</p>
                     </div>
                 </div>
-                <div class="basketProductRight" id="basketProductRight${[i]}">
+                <div class="basketProductRight">
                     <p class="productPrice">${basket[i].price}€</p>
+                    <button class="removeButton"><i class="fas fa-trash-alt"></i></button>
                 </div>
-            </div>`;
+            </div>`
 
         basketContenu.innerHTML += basketProduct
 
-        function priceBalance() {
-            totalPrice += basket[i].price
-        } priceBalance()
+        const remove = document.getElementById(`remove${i}`)
 
-        const basketRight = document.getElementById(`basketProductRight${[i]}`)
-        const remove = document.createElement('button')
+        totalPrice += basket[i].price
+    }
 
-        remove.innerHTML = `<i class="fas fa-trash-alt"></i>`
 
-        remove.addEventListener('click', function() {
-            const basketItem = remove.parentElement.parentElement
-            storage.remove(basketItem)
-            basketContenu.removeChild(basketItem)
-            priceBalance()
+    // Boutons de suppression
+    const buttons = document.getElementsByClassName('removeButton')
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            basket.splice(i, 1)
+            localStorage.setItem('basket', JSON.stringify(basket))
+            location.reload()
         })
-
-        basketRight.appendChild(remove)
     }
 
     // Prix total du panier
