@@ -121,6 +121,18 @@ a {
   text-decoration: none;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.black {
+  color: black;
+}
+
+.pink {
+  color: #c9707f;
+}
+
 /* Imports */
 /* Colors */
 /* Imports */
@@ -351,19 +363,19 @@ footer i {
   margin: 50px;
 }
 
-#confirmation #confirmationInformations .shippingAdressConfirmation {
+#confirmation #confirmationInformations .titleConfirmation {
   margin-bottom: 5px;
   color: #c9707f;
 }
 
-#confirmation #confirmationInformations .confirmationNameSurname, #confirmation #confirmationInformations .confirmationAdress {
+#confirmation #confirmationInformations .confirmationNameSurname {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: -25px;
 }
 
-#confirmation #confirmationInformations .confirmationName, #confirmation #confirmationInformations .confirmationAdressNumber {
+#confirmation #confirmationInformations .confirmationName {
   margin-right: 7px;
 }
 
@@ -373,14 +385,10 @@ footer i {
 
 #confirmation > p {
   font-size: 20px;
-  font-style: italic;
 }
 
 #confirmation .totalPriceConfirmation {
   margin-left: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 25px;
 }
 
@@ -388,7 +396,7 @@ footer i {
   margin-right: 20px;
 }
 
-#confirmation .totalPriceConfirmation .totalPriceNumber {
+#confirmation .totalPriceConfirmation #priceConfirmation, #confirmation .totalPriceConfirmation #idConfirmation {
   color: #c9707f;
 }
 

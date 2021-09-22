@@ -34,12 +34,6 @@
             <h1>Orinoco</h1>
         </div>
 
-        <div class="headerBtns">
-
-            <a class="headerBasket" href="../Pages/basket.html">Basket</a>
-             
-        </div>
-
     </header>
     <!-- Header END -->
 
@@ -48,31 +42,24 @@
     <!-- Confirmation -->
     <section id="confirmation">
         <h2>Confirmation de commande</h2>
-        <p class="thanks">Thanks for your purchase, "pseudo"!</p>
+        <p id="thanks">Merci pour votre commande <span class="bold pink" id="thanksName"></span> !</p>
+        <p id="thanks">Un e-mail de confirmation a été envoyé à l'adresse mail suivante: <span class="bold pink" id="emailConfirmation"></span> </p>
 
         <!-- Confirmation Page Informations -->
         <div id="confirmationInformations">
-            <p class="shippingAdressConfirmation">Shipping Adress:</p>
 
-            <div class="confirmationNameSurname"> <!-- Name and Surname -->
-                <p class="confirmationName">Name</p>
-                <p class="confirmationSurname">Surname</p>
-            </div>
-
-            <div class="confirmationAdress"> <!-- Number and Street Name -->
-                <p class="confirmationAdressNumber">Number</p>
-                <p class="confirmationStreetName">Street Name</p>
-            </div>
-
-            <p class="confirmationPostalCode">13000</p> <!-- Postal Code -->
+            <p class="titleConfirmation">Identité: <span class="bold black" id="namesConfirmation"></span></p>
+            <p class="titleConfirmation">Adresse de livraison: <span class="bold black" id="addressConfirmation"></span></p>
 
         </div>
         <!-- Confirmation Page Informations END -->
 
         <!-- Total Price -->
-        <div class="totalPriceConfirmation"> 
-            <p>Total Price:</p>
-            <p class="totalPriceNumber">0,00€</p>
+        <div class="totalPriceConfirmation">
+
+            <p>Prix total: <span class="bold" id="priceConfirmation"></span></p>
+            <p>ID de commande: <span class="bold" id="idConfirmation"></span></p>
+
         </div>
         <!-- Total Price END -->
 

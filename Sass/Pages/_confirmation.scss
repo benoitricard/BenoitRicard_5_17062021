@@ -7,15 +7,15 @@
     height: 350px;
     #confirmationInformations {
         margin: 50px;
-        .shippingAdressConfirmation {
+        .titleConfirmation {
             margin-bottom: 5px;
             color: $colorIcon;
         }
-        .confirmationNameSurname, .confirmationAdress {
+        .confirmationNameSurname {
             display: flex;
             margin-bottom: -25px;
         }
-        .confirmationName, .confirmationAdressNumber {
+        .confirmationName {
             margin-right: 7px;
         }
     }
@@ -24,16 +24,14 @@
     }
     > p {
         font-size: 20px;
-        font-style: italic;
     }
     .totalPriceConfirmation {
         margin-left: 50px;
-        display: flex;
         font-size: 25px;
         > p {
             margin-right: 20px;
         }
-        .totalPriceNumber {
+        #priceConfirmation, #idConfirmation {
             color: $colorIcon;
         }
     }
