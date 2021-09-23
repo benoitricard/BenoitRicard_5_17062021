@@ -22,33 +22,37 @@ fetch(`http://localhost:3000/api/teddies/${id}`)
     const teddy = value
 
     // Page produit
-    const section = document.getElementById('sectionContainer')
-    section.innerHTML = `<img class="teddyImage" src="${teddy.imageUrl}" alt="teddybear">
-    <div class="productInfo">
-        <h2 class="teddyName">${teddy.name}</h2>
-        <p class="teddyId">ID: ${teddy._id}</p>
-        <p class="teddyPrice">${teddy.price/=100}€</p>
-        <p class="teddyDescription">${teddy.description}</p>
-        <div class="teddyColors">
-            <label for="teddyColorsInput">Colors</label>
-            <select id="select" name="teddyColorsInput">
-            </select>
-        </div>
-        <button id="addBasket"><i class="fas fa-shopping-cart"></i>Add to Basket</button>
-    </div>`
+    function product() {
+        const section = document.getElementById('sectionContainer')
+        section.innerHTML = `<img class="teddyImage" src="${teddy.imageUrl}" alt="teddybear">
+        <div class="productInfo">
+            <h2 class="teddyName">${teddy.name}</h2>
+            <p class="teddyId">ID: ${teddy._id}</p>
+            <p class="teddyPrice">${teddy.price/=100}€</p>
+            <p class="teddyDescription">${teddy.description}</p>
+            <div class="teddyColors">
+                <label for="teddyColorsInput">Colors</label>
+                <select id="select" name="teddyColorsInput">
+                </select>
+            </div>
+            <button id="addBasket"><i class="fas fa-shopping-cart"></i>Add to Basket</button>
+        </div>`
+    } product()
 
     // Récupération des couleurs
     const select = document.getElementById('select')
-    for (let i = 0; i < teddy.colors.length; i++) {
-        const option = document.createElement('option')
-        option.innerHTML = teddy.colors[i]
-        select.appendChild(option)
-    }
+    function inputColors() {
+        for (let i = 0; i < teddy.colors.length; i++) {
+                const option = document.createElement('option')
+                option.innerHTML = teddy.colors[i]
+                select.appendChild(option)
+        }
+    } inputColors()
 
     // Bouton 'Add to Basket'
     const button = document.getElementById('addBasket')
     
-    button.addEventListener('click', function () {
+    button.addEventListener('click', function basketButton() {
         basket.push(teddy)
         localStorage.setItem('basket', JSON.stringify(basket))
     })

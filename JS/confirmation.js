@@ -13,17 +13,21 @@ const priceConfirmation = document.getElementById('priceConfirmation')
 const idConfirmation = document.getElementById('idConfirmation')
 
 // On remplit les éléments HTML avec le contenu de 'contact'
-thanksName.textContent = order.contact.firstName
-namesConfirmation.textContent = order.contact.firstName + ' ' + order.contact.lastName
-addressConfirmation.textContent = order.contact.address + ', ' + order.contact.city
-emailConfirmation.textContent = order.contact.email
+function informations() {
+    thanksName.textContent = order.contact.firstName
+    namesConfirmation.textContent = order.contact.firstName + ' ' + order.contact.lastName
+    addressConfirmation.textContent = order.contact.address + ', ' + order.contact.city
+    emailConfirmation.textContent = order.contact.email
+} informations()
 
 // On récupère le prix total du panier
 let totalPrice = 0
 
-for (let i = 0; i < basket.length; i++) {
-    totalPrice += basket[i].price
-}
+function price() {
+    for (let i = 0; i < basket.length; i++) {
+        totalPrice += basket[i].price
+    }
+} price()
 
 // On affiche le prix total et l'ID fourni par l'API
 priceConfirmation.textContent = totalPrice + '€'
